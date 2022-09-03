@@ -39,7 +39,7 @@ public class EstadoController {
     }
 
     @DeleteMapping(path = "/{id}")
-    public void deletarEstados(@PathVariable Long id){
+    public void deletarEstados(@PathVariable Long id) {
         estadoService.deletarEstado(id);
     }
 
