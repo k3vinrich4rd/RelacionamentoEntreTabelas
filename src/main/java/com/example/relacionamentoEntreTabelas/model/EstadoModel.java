@@ -26,7 +26,10 @@ public class EstadoModel implements Serializable {
     @Column(name = "nome_estado", length = 50, nullable = false)
     private String nomeEstado;
 
-    @JsonIgnore
+    @JsonIgnore // Para evitar erros de recursividade
+    //Mapped tem que ser igual o nome da minha classe
+    //Cascade = cascata            //TypeAll - excluir tudo
+    //Um estado para uma cidade
     @OneToMany(mappedBy = "estadoModel", cascade = CascadeType.ALL)
     private List<CidadeModel> cidadeModel = new ArrayList<>();
 }

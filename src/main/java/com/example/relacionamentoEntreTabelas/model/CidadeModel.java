@@ -29,8 +29,9 @@ public class CidadeModel implements Serializable {
     //Cascade e para se excluir cliente o endereço seja excluído
     //OneToMany, várias cidades para um estado
 
-    @ManyToOne
-    @JoinColumn(name = "estados_id",referencedColumnName = "id")
+    @ManyToOne //Muitas cidades para um estado
+    //JoinColum = junção de colunas// reference ao id
+    @JoinColumn(name = "estados_id", referencedColumnName = "id")
     private EstadoModel estadoModel;
 
 
