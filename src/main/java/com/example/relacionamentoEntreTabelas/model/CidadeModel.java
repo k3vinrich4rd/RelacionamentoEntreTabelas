@@ -29,10 +29,9 @@ public class CidadeModel implements Serializable {
     //Cascade e para se excluir cliente o endereço seja excluído
     //OneToMany, várias cidades para um estado
 
-    @JsonIgnore //Para evitar recursividade de buscas
-    //mappedBy, tem que ser o mesmo nome da classe
-    @OneToMany(mappedBy = "cidadeModel", cascade = CascadeType.ALL)
-    private List<EstadoModel> estadoModel = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "estados_id",referencedColumnName = "id")
+    private EstadoModel estadoModel;
 
 
 }
