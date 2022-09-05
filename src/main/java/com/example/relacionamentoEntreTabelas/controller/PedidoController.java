@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/pedidos")
-public class PedidosController {
+public class PedidoController {
 
     @Autowired
     private PedidosService pedidosService;
