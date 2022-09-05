@@ -30,7 +30,15 @@ public class ClienteModel implements Serializable {
     //Cascade e para se excluir cliente o endereço seja excluído
     //OneToMany, vários endereços um cliente
     @JsonIgnore // Para evitar recursividade de buscas
+    //Ignora o atributo mapeado
     //mappedBy, tem que ser o mesmo nome da classe
     @OneToMany(mappedBy = "clienteModel", cascade = CascadeType.ALL)
+    //Sempre que acabar com many, fazer uma lista
     private List<EnderecoModel> enderecoModel = new ArrayList<>();
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "clienteModel", cascade = CascadeType.ALL)
+    private List<PedidoModel> pedidoModel = new ArrayList<>();
+
+
 }

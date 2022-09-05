@@ -24,7 +24,7 @@ public class EnderecoModel implements Serializable {
     private String logradouro;
 
     @ManyToOne // Muitos para um / //Vários endereços um cliente
-    @JoinColumn(name = "cliente_id", referencedColumnName = "id")
+    @JoinColumn(name = "cliente_id", referencedColumnName = "id") // Linha de relação com o banco de dados
     private ClienteModel clienteModel;
 
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +32,9 @@ public class EstadoController {
     @GetMapping(path = "/{id}")
     public ResponseEntity<Optional<EstadoModel>> exibirEstadosViaId(@PathVariable Long id) {
         return ResponseEntity.ok(estadoService.exibirEstadosViaId(id));
+
     }
+
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<EstadoModel> alterarEstadosCadastrados(@RequestBody EstadoModel estadoModel) {

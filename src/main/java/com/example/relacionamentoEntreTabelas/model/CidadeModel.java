@@ -1,6 +1,5 @@
 package com.example.relacionamentoEntreTabelas.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,8 +7,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
@@ -31,7 +28,7 @@ public class CidadeModel implements Serializable {
 
     @ManyToOne //Muitas cidades para um estado
     //JoinColum = junção de colunas// reference ao id
-    @JoinColumn(name = "estados_id", referencedColumnName = "id")
+    @JoinColumn(name = "estado_id", referencedColumnName = "id")
     private EstadoModel estadoModel;
 
 

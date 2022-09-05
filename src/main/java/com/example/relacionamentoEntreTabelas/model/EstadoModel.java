@@ -26,6 +26,9 @@ public class EstadoModel implements Serializable {
     @Column(name = "nome_estado", length = 50, nullable = false)
     private String nomeEstado;
 
+    @Column(name = "sigla_estado", length = 2, nullable = false)
+    private String siglaEstado;
+
     @JsonIgnore // Para evitar erros de recursividade
     //Mapped tem que ser igual o nome da minha classe
     //Cascade = cascata            //TypeAll - excluir tudo
