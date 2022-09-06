@@ -32,7 +32,7 @@ public class PedidoController {
     public ResponseEntity<Optional<PedidoModel>> exibirViaId(@PathVariable Long id) {
         return ResponseEntity.ok(pedidosService.exibirPedidosViaId(id));
     }
-    @PostMapping(path = "/{id}")
+    @PutMapping(path = "/{id}")
     public ResponseEntity<PedidoModel> alterarPedidosCadastrado(@RequestBody PedidoModel pedidoModel){
         return ResponseEntity.ok(pedidosService.alterarPedidoCadastrado(pedidoModel));
 
