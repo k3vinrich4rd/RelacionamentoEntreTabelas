@@ -33,4 +33,8 @@ public class ClienteService {
     public void deletarCadastro(Long id) {
         iClienteRepository.deleteById(id);
     }
+
+    public List<ClienteModel> getBuscaCliente() {
+        return iClienteRepository.getCliente();
+    }
 }

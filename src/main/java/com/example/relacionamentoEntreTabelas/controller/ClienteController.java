@@ -42,4 +42,10 @@ public class ClienteController {
     public void deletarClienteCadastrado(@PathVariable Long id) {
         clienteService.deletarCadastro(id);
     }
+
+    //Query
+    @GetMapping(path = "/total")
+    public ResponseEntity<List<ClienteModel>> getCliente(){
+        return ResponseEntity.ok(clienteService.getBuscaCliente());
+    }
 }

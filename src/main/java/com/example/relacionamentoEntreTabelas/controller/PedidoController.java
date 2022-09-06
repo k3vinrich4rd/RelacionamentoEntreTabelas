@@ -32,14 +32,15 @@ public class PedidoController {
     public ResponseEntity<Optional<PedidoModel>> exibirViaId(@PathVariable Long id) {
         return ResponseEntity.ok(pedidosService.exibirPedidosViaId(id));
     }
+
     @PutMapping(path = "/{id}")
-    public ResponseEntity<PedidoModel> alterarPedidosCadastrado(@RequestBody PedidoModel pedidoModel){
+    public ResponseEntity<PedidoModel> alterarPedidosCadastrado(@RequestBody PedidoModel pedidoModel) {
         return ResponseEntity.ok(pedidosService.alterarPedidoCadastrado(pedidoModel));
 
     }
 
     @DeleteMapping(path = "/{id}")
-    public void deletarPedidosCadastrados(@PathVariable Long id){
+    public void deletarPedidosCadastrados(@PathVariable Long id) {
         pedidosService.deletar(id);
     }
 

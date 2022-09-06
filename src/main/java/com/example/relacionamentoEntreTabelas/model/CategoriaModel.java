@@ -26,9 +26,6 @@ public class CategoriaModel implements Serializable {
     @Column(name = "categoria", length = 150, nullable = false)
     private String categoria;
 
-//    @ManyToOne
-//    @JoinColumn(name = "categoria_id", referencedColumnName = "id")
-//    private CategoriaModel categoriaModel;
 
     @JsonIgnore
     @OneToMany(mappedBy = "categoriaModel", cascade = CascadeType.ALL)
