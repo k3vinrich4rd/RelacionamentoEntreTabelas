@@ -34,4 +34,11 @@ public class CidadeService {
     public void apagarEstadoCadastrado(Long id) {
         iCidadeRepository.deleteById(id);
     }
+
+    //Query
+    public List<CidadeModel> getCidades() {
+        return iCidadeRepository.getCidades();
+    }
+
+
 }

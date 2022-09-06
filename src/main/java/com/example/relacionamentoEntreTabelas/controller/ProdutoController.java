@@ -43,4 +43,9 @@ public class ProdutoController {
         produtoService.deletarProdutos(id);
     }
 
+    //Query
+    @GetMapping(path = "/find-all")
+    public ResponseEntity<List<ProdutoModel>> getProdutos() {
+        return ResponseEntity.ok(produtoService.getProdutos());
+    }
 }

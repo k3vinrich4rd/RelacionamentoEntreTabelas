@@ -34,4 +34,9 @@ public class ProdutoService {
     public void deletarProdutos(Long id) {
         iProdutoRepository.deleteById(id);
     }
+
+    //Query
+    public List<ProdutoModel> getProdutos() {
+        return iProdutoRepository.getProdutos();
+    }
 }

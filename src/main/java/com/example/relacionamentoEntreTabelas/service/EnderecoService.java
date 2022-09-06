@@ -11,6 +11,7 @@ import java.util.Optional;
 @Service
 public class EnderecoService {
 
+
     @Autowired
     IEnderecoRepository iEnderecoRepository;
 
@@ -32,6 +33,12 @@ public class EnderecoService {
 
     public void deletarEndereco(Long id) {
         iEnderecoRepository.deleteById(id);
+    }
+
+
+    //Query
+    public List<EnderecoModel> getEnderecos() {
+        return iEnderecoRepository.getEnderecos();
     }
 
 }

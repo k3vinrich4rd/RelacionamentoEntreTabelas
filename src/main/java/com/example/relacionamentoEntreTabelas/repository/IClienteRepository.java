@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface IClienteRepository extends JpaRepository<ClienteModel, Long> {
     @Query("select c from ClienteModel c")
-    public List<ClienteModel> getCliente();
+    public List<ClienteModel> getClientes();
 }

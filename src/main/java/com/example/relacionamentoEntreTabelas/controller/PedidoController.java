@@ -44,4 +44,10 @@ public class PedidoController {
         pedidosService.deletar(id);
     }
 
+    //Query
+    @GetMapping(path = "/find-all")
+    public ResponseEntity<List<PedidoModel>> getPedidos() {
+        return ResponseEntity.ok(pedidosService.getPedidos());
+    }
+
 }

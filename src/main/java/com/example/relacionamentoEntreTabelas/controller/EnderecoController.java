@@ -42,4 +42,10 @@ public class EnderecoController {
     public void deletarEnderecoCadastrado(@PathVariable Long id) {
         enderecoService.deletarEndereco(id);
     }
+
+    //Query
+    @GetMapping(path = "/find-all")
+    public ResponseEntity<List<EnderecoModel>> getEnderecos() {
+        return ResponseEntity.ok(enderecoService.getEnderecos());
+    }
 }

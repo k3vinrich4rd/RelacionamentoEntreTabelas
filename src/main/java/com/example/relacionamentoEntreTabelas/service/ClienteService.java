@@ -34,7 +34,9 @@ public class ClienteService {
         iClienteRepository.deleteById(id);
     }
 
+    //Query
     public List<ClienteModel> getBuscaCliente() {
-        return iClienteRepository.getCliente();
+        return iClienteRepository.getClientes();
     }
+
 }

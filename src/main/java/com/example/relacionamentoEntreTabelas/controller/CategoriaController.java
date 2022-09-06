@@ -43,5 +43,10 @@ public class CategoriaController {
         categoriaService.deletarCategoria(id);
     }
 
+    //Query
+    @GetMapping(path = "/find-all")
+    public ResponseEntity<List<CategoriaModel>> exibirTodasCategorias() {
+        return ResponseEntity.ok(categoriaService.getCategorias());
+    }
 
 }

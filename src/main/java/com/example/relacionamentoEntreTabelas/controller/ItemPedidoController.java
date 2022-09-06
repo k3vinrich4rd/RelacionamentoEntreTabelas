@@ -42,4 +42,10 @@ public class ItemPedidoController {
     public void deletarPedido(@PathVariable Long id) {
         itemPedidoService.deletarPedido(id);
     }
+
+    //Query
+    @GetMapping(path = "/find-all")
+    public ResponseEntity<List<ItemPedidoModel>> getItemPedidos() {
+        return ResponseEntity.ok(itemPedidoService.getPedidos());
+    }
 }

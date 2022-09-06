@@ -34,4 +34,9 @@ public class EstadoService {
     public void deletarEstado(Long id) {
         iEstadoRepository.deleteById(id);
     }
+
+    //Query
+    public List<EstadoModel> getEstados() {
+        return iEstadoRepository.getEstados();
+    }
 }

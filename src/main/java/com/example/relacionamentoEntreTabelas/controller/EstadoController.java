@@ -45,4 +45,10 @@ public class EstadoController {
         estadoService.deletarEstado(id);
     }
 
+    //Query
+    @GetMapping(path = "/find-all")
+    public ResponseEntity<List<EstadoModel>> getEstados(){
+        return ResponseEntity.ok(estadoService.getEstados());
+    }
+
 }

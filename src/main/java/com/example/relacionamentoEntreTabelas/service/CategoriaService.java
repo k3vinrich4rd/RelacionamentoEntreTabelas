@@ -35,4 +35,9 @@ public class CategoriaService {
     public void deletarCategoria(Long id) {
         iCategoriaRepository.deleteById(id);
     }
+
+    //Query
+    public List<CategoriaModel> getCategorias() {
+        return iCategoriaRepository.getCategorias();
+    }
 }

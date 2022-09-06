@@ -44,8 +44,8 @@ public class ClienteController {
     }
 
     //Query
-    @GetMapping(path = "/total")
-    public ResponseEntity<List<ClienteModel>> getCliente(){
+    @GetMapping(path = "/find-all")
+    public ResponseEntity<List<ClienteModel>> getCliente() {
         return ResponseEntity.ok(clienteService.getBuscaCliente());
     }
 }

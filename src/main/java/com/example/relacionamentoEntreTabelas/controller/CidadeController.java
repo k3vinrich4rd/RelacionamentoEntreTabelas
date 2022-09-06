@@ -43,5 +43,11 @@ public class CidadeController {
         cidadeService.apagarEstadoCadastrado(id);
     }
 
+    //Query
+    @GetMapping(path = "/find-all")
+    public ResponseEntity<List<CidadeModel>> getCidades() {
+        return ResponseEntity.ok(cidadeService.getCidades());
+    }
+
 
 }

@@ -33,5 +33,11 @@ public class ItemPedidoService {
 
     public void deletarPedido(Long id) {
         itemPedidoRepository.deleteById(id);
+
+    }
+
+    //Query
+    public List<ItemPedidoModel> getPedidos() {
+        return itemPedidoRepository.getItemPedidos();
     }
 }

@@ -11,6 +11,7 @@ import java.util.Optional;
 @Service
 public class PedidosService {
 
+
     @Autowired
     private IPedidosRepository iPedidosRepository;
 
@@ -32,5 +33,10 @@ public class PedidosService {
 
     public void deletar(Long id) {
         iPedidosRepository.deleteById(id);
+    }
+
+    //Query
+    public List<PedidoModel> getPedidos() {
+        return iPedidosRepository.getPedidos();
     }
 }
