@@ -48,4 +48,6 @@ public class ClienteController {
     public ResponseEntity<List<ClienteModel>> getCliente() {
         return ResponseEntity.ok(clienteService.getBuscaCliente());
     }
+
+
 }

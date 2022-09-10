@@ -1,5 +1,6 @@
 package com.example.relacionamentoEntreTabelas.service;
 
+import com.example.relacionamentoEntreTabelas.model.ClienteModel;
 import com.example.relacionamentoEntreTabelas.model.EnderecoModel;
 import com.example.relacionamentoEntreTabelas.repository.IEnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,10 @@ public class EnderecoService {
     public List<EnderecoModel> getEnderecos() {
         return iEnderecoRepository.getEnderecos();
     }
+
+
+
+
 
 }
 

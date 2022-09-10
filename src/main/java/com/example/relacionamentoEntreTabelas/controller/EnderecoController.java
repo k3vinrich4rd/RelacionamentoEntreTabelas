@@ -17,6 +17,7 @@ public class EnderecoController {
     @Autowired
     private EnderecoService enderecoService;
 
+
     @PostMapping
     public ResponseEntity<EnderecoModel> cadastrarEndereco(@RequestBody EnderecoModel enderecoModel) {
         EnderecoModel enderecos = enderecoService.cadastrarEndereco(enderecoModel);
@@ -34,6 +35,7 @@ public class EnderecoController {
     }
 
     @PutMapping(path = "/{id}")
+
     public ResponseEntity<EnderecoModel> alterarEnderecosCadastrados(@RequestBody EnderecoModel enderecoModel) {
         return ResponseEntity.ok(enderecoService.alterarEnderecos(enderecoModel));
     }
@@ -48,4 +50,6 @@ public class EnderecoController {
     public ResponseEntity<List<EnderecoModel>> getEnderecos() {
         return ResponseEntity.ok(enderecoService.getEnderecos());
     }
+
+
 }

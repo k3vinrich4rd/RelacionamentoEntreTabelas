@@ -10,5 +10,11 @@ import java.util.List;
 @Repository
 public interface IEnderecoRepository extends JpaRepository<EnderecoModel, Long> {
     @Query("select e from EnderecoModel e")
-    public List<EnderecoModel> getEnderecos();
+    List<EnderecoModel> getEnderecos();
+
 }
+
+
+
+
+

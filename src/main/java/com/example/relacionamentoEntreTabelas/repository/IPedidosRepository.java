@@ -10,5 +10,6 @@ import java.util.List;
 @Repository
 public interface IPedidosRepository extends JpaRepository<PedidoModel, Long> {
     @Query("select p from PedidoModel p ")
-    public List<PedidoModel> getPedidos();
+    List<PedidoModel> getPedidos();
+
 }
